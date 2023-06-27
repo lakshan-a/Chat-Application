@@ -23,6 +23,6 @@
          </image>
       </ImageView>
       <Label layoutX="163.0" layoutY="315.0" text="Enter Your Name" />
-      <TextField layoutX="164.0" layoutY="333.0" prefHeight="26.0" prefWidth="273.0" />
+      <TextField fx:id="userName" layoutX="164.0" layoutY="333.0" onAction="#NameOnAction" prefHeight="26.0" prefWidth="273.0" />
    </children>
 </AnchorPane>

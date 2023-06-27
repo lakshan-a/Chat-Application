@@ -16,7 +16,7 @@ public class ClientInitializer extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/login.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/client.fxml"));
         Scene mainScene = new Scene(root);
         stage.setScene(mainScene);
         stage.setTitle("Java FX POS");

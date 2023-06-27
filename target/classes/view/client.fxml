@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="566.0" prefWidth="359.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClientController">
+    <children>
+        <AnchorPane prefHeight="77.0" prefWidth="359.0" style="-fx-background-color: #00B4D8;">
+            <children>
+                <Label layoutX="76.0" layoutY="21.0" text="Lakshan Rashmika">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="77.0" fitWidth="77.0" layoutX="294.0" layoutY="-4.0">
+                    <image>
+                        <Image url="@../image/Entypo_274e(1)_128.png" />
+                    </image>
+                </ImageView>
+                <ImageView layoutX="6.0" layoutY="2.0">
+                    <image>
+                        <Image url="@../image/FontAwesome_f007(0)_64.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <ScrollPane layoutX="24.0" layoutY="95.0" prefHeight="376.0" prefWidth="324.0">
+            <content>
+                <VBox prefHeight="374.0" prefWidth="322.0" />
+            </content></ScrollPane>
+        <TextField layoutX="58.0" layoutY="500.0" prefHeight="25.0" prefWidth="213.0" />
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="275.0" layoutY="493.0">
+            <image>
+                <Image url="@../image/face.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="11.0" layoutY="486.0">
+            <image>
+                <Image url="@../image/Entypo_d83d(1)_64.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="306.0" layoutY="485.0">
+            <image>
+                <Image url="@../image/Entypo_e79b(2)_64.png" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="imogi_pane" layoutX="125.0" layoutY="262.0" opacity="0.74" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: gray; -fx-background-radius: 15;">
+            <children>
+                <GridPane layoutX="10.0" layoutY="13.0" onMouseClicked="#emo_pane_on_action" prefHeight="200.0" prefWidth="149.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#sad" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/baww.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#lot_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <image>
+                                <Image url="@../image/sad_eye_close.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseDragged="#money" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                            <image>
+                                <Image url="@../image/money.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#love" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+                            <image>
+                                <Image url="@../image/love.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#green_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                            <image>
+                                <Image url="@../image/blaaaak.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_one_eyy" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <image>
+                                <Image url="@../image/smile_eye_close.png" />
+                            </image>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_yes" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                            <image>
+                                <Image url="@../image/sad_one.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_head" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                            <image>
+                                <Image url="@../image/sad_head.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#real_amile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                            <image>
+                                <Image url="@../image/smile_real.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tuin" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                            <image>
+                                <Image url="@../image/tuinnn.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#woow" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                            <image>
+                                <Image url="@../image/woow.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_normal" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                            <image>
+                                <Image url="@../image/smile_two.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#large_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                            <image>
+                                <Image url="@../image/smile_one.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#small_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                            <image>
+                                <Image url="@../image/smile_normal.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tong_smile" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                            <image>
+                                <Image url="@../image/tong_face.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </GridPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
