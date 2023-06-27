@@ -18,7 +18,7 @@
     <children>
         <AnchorPane prefHeight="77.0" prefWidth="359.0" style="-fx-background-color: #00B4D8;">
             <children>
-                <Label layoutX="76.0" layoutY="21.0" text="Lakshan Rashmika">
+                <Label fx:id="lbl_name" layoutX="76.0" layoutY="21.0" text="Lakshan Rashmika">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font>
@@ -40,9 +40,9 @@
         </AnchorPane>
         <ScrollPane fx:id="TxtMassageShowFeild" layoutX="24.0" layoutY="95.0" prefHeight="376.0" prefWidth="324.0">
             <content>
-                <VBox fx:id="VBox" prefHeight="374.0" prefWidth="322.0" />
+                <VBox fx:id="VBox" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="374.0" prefWidth="322.0" />
             </content></ScrollPane>
-        <TextField fx:id="textChat" layoutX="58.0" layoutY="500.0" onAction="#ChatOnAction" prefHeight="25.0" prefWidth="213.0" />
+        <TextField fx:id="textChat" layoutX="58.0" layoutY="500.0" onAction="#ChatOnAction" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="25.0" prefWidth="213.0" />
         <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="275.0" layoutY="493.0" onMouseClicked="#btn_imogi_on_action">
             <image>
                 <Image url="@../image/face.png" />
