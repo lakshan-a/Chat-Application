@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -22,10 +23,13 @@
                         <Font name="System Bold" size="24.0" />
                     </font>
                 </Label>
-                <ImageView fitHeight="77.0" fitWidth="77.0" layoutX="294.0" layoutY="-4.0">
+                <ImageView fitHeight="77.0" fitWidth="77.0" layoutX="294.0" layoutY="-4.0" onMouseClicked="#btn_logout_On_action">
                     <image>
                         <Image url="@../image/Entypo_274e(1)_128.png" />
                     </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </ImageView>
                 <ImageView layoutX="6.0" layoutY="2.0">
                     <image>
@@ -34,25 +38,34 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <ScrollPane layoutX="24.0" layoutY="95.0" prefHeight="376.0" prefWidth="324.0">
+        <ScrollPane fx:id="TxtMassageShowFeild" layoutX="24.0" layoutY="95.0" prefHeight="376.0" prefWidth="324.0">
             <content>
-                <VBox prefHeight="374.0" prefWidth="322.0" />
+                <VBox fx:id="VBox" prefHeight="374.0" prefWidth="322.0" />
             </content></ScrollPane>
-        <TextField layoutX="58.0" layoutY="500.0" prefHeight="25.0" prefWidth="213.0" />
-        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="275.0" layoutY="493.0">
+        <TextField fx:id="textChat" layoutX="58.0" layoutY="500.0" onAction="#ChatOnAction" prefHeight="25.0" prefWidth="213.0" />
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="275.0" layoutY="493.0" onMouseClicked="#btn_imogi_on_action">
             <image>
                 <Image url="@../image/face.png" />
             </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </ImageView>
-        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="11.0" layoutY="486.0">
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="11.0" layoutY="486.0" onMouseClicked="#btn_cam_on_action">
             <image>
                 <Image url="@../image/Entypo_d83d(1)_64.png" />
             </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </ImageView>
-        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="306.0" layoutY="485.0">
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="306.0" layoutY="485.0" onMouseClicked="#btn_massage_send_on_action">
             <image>
                 <Image url="@../image/Entypo_e79b(2)_64.png" />
             </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </ImageView>
         <AnchorPane fx:id="imogi_pane" layoutX="125.0" layoutY="262.0" opacity="0.74" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: gray; -fx-background-radius: 15;">
             <children>
@@ -80,26 +93,41 @@
                             <image>
                                 <Image url="@../image/baww.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#lot_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                             <image>
                                 <Image url="@../image/sad_eye_close.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseDragged="#money" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                             <image>
                                 <Image url="@../image/money.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#love" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
                             <image>
                                 <Image url="@../image/love.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#green_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                             <image>
                                 <Image url="@../image/blaaaak.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_one_eyy" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
                             <image>
@@ -108,51 +136,81 @@
                             <GridPane.margin>
                                 <Insets />
                             </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_yes" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                             <image>
                                 <Image url="@../image/sad_one.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_head" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
                             <image>
                                 <Image url="@../image/sad_head.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#real_amile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
                             <image>
                                 <Image url="@../image/smile_real.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tuin" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
                             <image>
                                 <Image url="@../image/tuinnn.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#woow" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
                             <image>
                                 <Image url="@../image/woow.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_normal" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
                             <image>
                                 <Image url="@../image/smile_two.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#large_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
                             <image>
                                 <Image url="@../image/smile_one.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#small_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
                             <image>
                                 <Image url="@../image/smile_normal.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tong_smile" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
                             <image>
                                 <Image url="@../image/tong_face.png" />
                             </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                         </ImageView>
                     </children>
                 </GridPane>
