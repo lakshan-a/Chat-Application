@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
    <children>
-      <AnchorPane prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #00B4D8;" />
+      <AnchorPane prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #00B4D8;">
+         <children>
+            <Label layoutX="205.0" layoutY="1.0" text="Live Chat">la
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fitHeight="171.0" fitWidth="174.0" layoutX="213.0" layoutY="94.0">
+         <image>
+            <Image url="@../image/FontAwesome_f007(0)_256.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="163.0" layoutY="315.0" text="Enter Your Name" />
+      <TextField layoutX="164.0" layoutY="333.0" prefHeight="26.0" prefWidth="273.0" />
    </children>
 </AnchorPane>
