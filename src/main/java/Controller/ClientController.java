@@ -97,7 +97,7 @@ public class ClientController extends Thread{
         String emoji = new String(Character.toChars(128525));
         textChat.setText(emoji);
         imogi_pane.setVisible(false);
-        
+
     }
 
     public void green_sad(MouseEvent mouseEvent) {
@@ -108,14 +108,22 @@ public class ClientController extends Thread{
     }
 
     public void smile_one_eyy(MouseEvent mouseEvent) {
-
+        String emoji = new String(Character.toChars(128540));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
     }
 
     public void cry_yes(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
     public void cry_head(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128550));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
