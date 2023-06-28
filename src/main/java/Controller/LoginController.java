@@ -13,7 +13,6 @@ public class LoginController {
 
     @FXML
     private TextField userName;
-   // public JFXTextField Txt_Enter_Name;
     static String User_name;
 
     @FXML

@@ -1,7 +1,7 @@
 package Controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -14,36 +14,22 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.nio.charset.Charset;
 
-public class ClientController {
-
-//
-//    public javafx.scene.control.ScrollPane TxtMassageShowFeild;
-//
-//    public TextField textChat;
-//    public ImageView lbl_name;
-//
-//    @FXML
-//    private VBox VBox;
-//
-//    @FXML
-//    private AnchorPane imogi_pane;
-
+public class ClientController extends Thread{
     public ScrollPane TxtMassageShowFeild;
-    public VBox v_box;
-    public TextField TxtMassageTypeFeild;
+    public VBox VBox;
+    /* public static HBox h_box;*/
+    public TextField textChat;
     public AnchorPane imogi_pane;
     public Label lbl_name;
-
 
     BufferedReader reader;
     PrintWriter writer;
@@ -51,6 +37,36 @@ public class ClientController {
     private FileChooser fileChooser;
     private File filePath;
 
+
+    public void btn_logout_On_action(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void btn_imogi_on_action(MouseEvent mouseEvent) {
+
+        imogi_pane.setVisible(true);
+
+    }
+
+    public void btn_cam_on_action(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image");
+        this.filePath = fileChooser.showOpenDialog(stage);
+        writer.println(lbl_name.getText() + " " + "img" + filePath.getPath());
+    }
+
+    public void btn_massage_send_on_action(MouseEvent mouseEvent) {
+        String msg = textChat.getText();
+        writer.println(lbl_name.getText() + ": " + msg);
+
+        textChat.clear();
+
+        if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
+            System.exit(0);
+
+        }
+    }
 
     public void emo_pane_on_action(MouseEvent mouseEvent) {
 
@@ -69,6 +85,7 @@ public class ClientController {
     }
 
     public void love(MouseEvent mouseEvent) {
+
 
     }
 
@@ -116,15 +133,16 @@ public class ClientController {
 
     }
 
-    public void btn_logout_On_action(MouseEvent mouseEvent) {
-        System.exit(0);
+
+    public void Mouse_On_Click_Hide_Emogi(MouseEvent mouseEvent) {
+        imogi_pane.setVisible(false);
     }
 
     public void ChatOnAction(ActionEvent event) {
-        String msg = TxtMassageTypeFeild.getText();
+        String msg = textChat.getText();
         writer.println(lbl_name.getText() + ": " + msg);
 
-        TxtMassageTypeFeild.clear();
+        textChat.clear();
 
 
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
@@ -132,29 +150,5 @@ public class ClientController {
 
         }
 
-    }
-
-    public void btn_imogi_on_action(MouseEvent mouseEvent) {
-        imogi_pane.setVisible(true);
-
-    }
-
-    public void btn_cam_on_action(MouseEvent mouseEvent) {
-        FileDialog dialog = new FileDialog((Frame)null, "Select File to Open");
-        dialog.setMode(FileDialog.LOAD);
-        dialog.setVisible(true);
-        String file = dialog.getDirectory()+dialog.getFile();
-        dialog.dispose();
-        //sendImage(file);
-        System.out.println(file + " chosen.");
-
-    }
-
-    public void btn_massage_send_on_action(MouseEvent mouseEvent) {
-
-    }
-
-    public void Mouse_On_Click_Hide_Emogi(MouseEvent mouseEvent) {
-        imogi_pane.setVisible(false);
     }
 }
