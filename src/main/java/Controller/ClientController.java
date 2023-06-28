@@ -73,10 +73,16 @@ public class ClientController extends Thread{
     }
 
     public void sad(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128546));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
     public void lot_sad(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128554));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
