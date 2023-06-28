@@ -149,18 +149,30 @@ public class ClientController extends Thread{
     }
 
     public void smile_normal(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128513));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
     public void large_smile(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128522));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
     public void small_smile(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128578));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
     public void tong_smile(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128539));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
