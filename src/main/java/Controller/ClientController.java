@@ -128,14 +128,23 @@ public class ClientController extends Thread{
     }
 
     public void real_amile(MouseEvent mouseEvent) {
+        String emoji =new String(Character.toChars(128514));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
     public void tuin(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128519));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
     public void woow(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128559));
+        textChat.setText(emoji);
+        imogi_pane.setVisible(false);
 
     }
 
