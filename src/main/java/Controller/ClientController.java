@@ -37,6 +37,23 @@ public class ClientController extends Thread{
     private FileChooser fileChooser;
     private File filePath;
 
+    public void initialize() throws IOException {
+        String userName=LoginController.User_name;
+        lbl_name.setText(userName);
+        try {
+            socket = new Socket("localhost", 4500);
+            System.out.println("Socket is connected with server!");
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            writer = new PrintWriter(socket.getOutputStream(), true);
+
+            this.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        imogi_pane.setVisible(false);
+    }
+
 
     public void btn_logout_On_action(MouseEvent mouseEvent) {
         System.exit(0);
